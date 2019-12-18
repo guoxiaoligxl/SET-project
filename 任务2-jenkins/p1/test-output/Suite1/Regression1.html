@@ -1,0 +1,334 @@
+<html>
+<head>
+<title>TestNG:  Regression1</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Regression1</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>51/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Dec 18 09:27:27 CST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>1185 seconds (1185403 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='guoxiaoli.Demo1.addarticle()'><b>addarticle</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 小说, 1</td>
+<td></td>
+<td>21</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.addarticle()'><b>addarticle</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 文学, 1</td>
+<td></td>
+<td>20</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.addarticle()'><b>addarticle</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 历史, 1</td>
+<td></td>
+<td>20</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.addarticle()'><b>addarticle</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 传记, 1</td>
+<td></td>
+<td>21</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.addarticle()'><b>addarticle</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 青春, 1</td>
+<td></td>
+<td>21</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.addarticle()'><b>addarticle</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 励志, 1</td>
+<td></td>
+<td>21</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.addarticle()'><b>addarticle</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 社科, 1</td>
+<td></td>
+<td>22</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.addarticle()'><b>addarticle</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 心理, 2</td>
+<td></td>
+<td>21</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.addarticle()'><b>addarticle</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 经济, 2</td>
+<td></td>
+<td>22</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.addarticle()'><b>addarticle</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 管理, 2</td>
+<td></td>
+<td>21</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo.backstage()'><b>backstage</b><br>Test class: guoxiaoli.Demo</td>
+<td></td>
+<td>14</td>
+<td>guoxiaoli.Demo@49e4cb85</td></tr>
+<tr>
+<td title='guoxiaoli.Demo.bagbuy()'><b>bagbuy</b><br>Test class: guoxiaoli.Demo</td>
+<td></td>
+<td>34</td>
+<td>guoxiaoli.Demo@49e4cb85</td></tr>
+<tr>
+<td title='guoxiaoli.Demo.bagcart()'><b>bagcart</b><br>Test class: guoxiaoli.Demo</td>
+<td></td>
+<td>63</td>
+<td>guoxiaoli.Demo@49e4cb85</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.db()'><b>db</b><br>Test class: guoxiaoli.Demo1</td>
+<td></td>
+<td>8</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.delivery()'><b>delivery</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 自取, 10, 5公斤, 5, 1, 顾客到店自取</td>
+<td></td>
+<td>18</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.delivery()'><b>delivery</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 他人代取, 15, 6公斤, 6, 2, 由快递站人员代取</td>
+<td></td>
+<td>14</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.delivery()'><b>delivery</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 送货上门, 20, 7公斤, 7, 1, 由工作人员将用户订购的商品送货到家</td>
+<td></td>
+<td>14</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo.foodbuy()'><b>foodbuy</b><br>Test class: guoxiaoli.Demo</td>
+<td></td>
+<td>35</td>
+<td>guoxiaoli.Demo@49e4cb85</td></tr>
+<tr>
+<td title='guoxiaoli.Demo.foodcart()'><b>foodcart</b><br>Test class: guoxiaoli.Demo</td>
+<td></td>
+<td>50</td>
+<td>guoxiaoli.Demo@49e4cb85</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.freight()'><b>freight</b><br>Test class: guoxiaoli.Demo1<br>Parameters: VANCL, 凡客配送, http://www.vancl.com, 1</td>
+<td></td>
+<td>5</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.freight()'><b>freight</b><br>Test class: guoxiaoli.Demo1<br>Parameters: DTW, 大田物流, http://www.dtw.com.cn, 1</td>
+<td></td>
+<td>15</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.freight()'><b>freight</b><br>Test class: guoxiaoli.Demo1<br>Parameters: POST, 挂号信, http://www.chinapost.com.cn, 1</td>
+<td></td>
+<td>11</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.freight()'><b>freight</b><br>Test class: guoxiaoli.Demo1<br>Parameters: GSD, 共速达, http://www.gongsuda.com, 1</td>
+<td></td>
+<td>13</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.freight()'><b>freight</b><br>Test class: guoxiaoli.Demo1<br>Parameters: HOAU, 华宇物流, http://www.hoau.net, 1</td>
+<td></td>
+<td>11</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.freight()'><b>freight</b><br>Test class: guoxiaoli.Demo1<br>Parameters: CNEX, 佳吉快运, http://www.jiaji.com, 1</td>
+<td></td>
+<td>12</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.freight()'><b>freight</b><br>Test class: guoxiaoli.Demo1<br>Parameters: JIAYI, 佳怡物流, http://www.jiayi56.com, 1</td>
+<td></td>
+<td>13</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo.jiajubuy()'><b>jiajubuy</b><br>Test class: guoxiaoli.Demo</td>
+<td></td>
+<td>35</td>
+<td>guoxiaoli.Demo@49e4cb85</td></tr>
+<tr>
+<td title='guoxiaoli.Demo.jiajucart()'><b>jiajucart</b><br>Test class: guoxiaoli.Demo</td>
+<td></td>
+<td>170</td>
+<td>guoxiaoli.Demo@49e4cb85</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.login()'><b>login</b><br>Test class: guoxiaoli.Demo1</td>
+<td></td>
+<td>11</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.netset()'><b>netset</b><br>Test class: guoxiaoli.Demo1</td>
+<td></td>
+<td>14</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.setback()'><b>setback</b><br>Test class: guoxiaoli.Demo1</td>
+<td></td>
+<td>6</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.setnav()'><b>setnav</b><br>Test class: guoxiaoli.Demo1</td>
+<td></td>
+<td>6</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.setpassowrd()'><b>setpassowrd</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 12345678, 12345678</td>
+<td></td>
+<td>6</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.setpassowrd()'><b>setpassowrd</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 12345679asd, 12345679asd</td>
+<td></td>
+<td>6</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.setpassowrd()'><b>setpassowrd</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 12345680zxc#, 12345680zxc#</td>
+<td></td>
+<td>6</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.setpassowrd()'><b>setpassowrd</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 123456, 123456</td>
+<td></td>
+<td>6</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.setpassowrd()'><b>setpassowrd</b><br>Test class: guoxiaoli.Demo1<br>Parameters: qwAzfgdfcg, qwAzfgdfcg</td>
+<td></td>
+<td>6</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.setpassowrd()'><b>setpassowrd</b><br>Test class: guoxiaoli.Demo1<br>Parameters: ADF, ADF</td>
+<td></td>
+<td>6</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.setpassowrd()'><b>setpassowrd</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 123456, 123456</td>
+<td></td>
+<td>6</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.setquit()'><b>setquit</b><br>Test class: guoxiaoli.Demo1</td>
+<td></td>
+<td>6</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.setshop()'><b>setshop</b><br>Test class: guoxiaoli.Demo1</td>
+<td></td>
+<td>6</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.takeself()'><b>takeself</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 师大, D:\\pic\\one.jpg, 北京市, 市辖区, 西城区, 新华大街, 123455, 15215215215, 1</td>
+<td></td>
+<td>12</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.takeself()'><b>takeself</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 科大, D:\\pic\\second.jpg, 北京市, 市辖区, 东城区, 新华大街, 123456, 15215215216, 1</td>
+<td></td>
+<td>22</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.takeself()'><b>takeself</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 医大, D:\\pic\\third.jpg, 北京市, 市辖区, 朝阳区, 新华大街, 123457, 15215215217, 1</td>
+<td></td>
+<td>14</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.takeself()'><b>takeself</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 北大, D:\\pic\\forth.jpg, 北京市, 市辖区, 海淀区, 新华大街, 123458, 15215215218, 1</td>
+<td></td>
+<td>20</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.takeself()'><b>takeself</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 师大, D:\\pic\\fifth.jpg, 天津市, 市辖区, 和平区, 裕华大街, 123459, 15215215219, 1</td>
+<td></td>
+<td>12</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.takeself()'><b>takeself</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 科大, D:\\pic\\sixth.jpg, 天津市, 市辖区, 河西区, 裕华大街, 123451, 15215215220, 1</td>
+<td></td>
+<td>22</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.takeself()'><b>takeself</b><br>Test class: guoxiaoli.Demo1<br>Parameters: 医大, D:\\pic\\seventh.jpg, 天津市, 市辖区, 河东区, 裕华大街, 123452, 15215215221, 1</td>
+<td></td>
+<td>12</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.takeself()'><b>takeself</b><br>Test class: guoxiaoli.Demo1<br>Parameters: asd, D:\\pic\\seventh.jpg, 河北省, 石家庄市, 长安区, 建设大街, 123453, 15215215222, 2</td>
+<td></td>
+<td>19</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.takeself()'><b>takeself</b><br>Test class: guoxiaoli.Demo1<br>Parameters: qwe, D:\\pic\\sixth.jpg, 河北省, 石家庄市, 桥西区, 平安大街, 123454, 15215215223, 3</td>
+<td></td>
+<td>12</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+<tr>
+<td title='guoxiaoli.Demo1.xitong()'><b>xitong</b><br>Test class: guoxiaoli.Demo1</td>
+<td></td>
+<td>6</td>
+<td>guoxiaoli.Demo1@2133c8f8</td></tr>
+</table><p>
+</body>
+</html>

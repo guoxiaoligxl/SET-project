@@ -1,0 +1,3 @@
+[ERROR] 2019-11-12 16:37:06,710 com.webtest.utils.Log - task1.SendTestMail@2aaf7cc2-send2运行失败，需要截屏
+[ERROR] 2019-11-12 16:38:29,093 com.webtest.utils.Log - task1.SendTestMail@2aaf7cc2-send2运行失败
+[ERROR] 2019-11-12 16:39:01,404 com.webtest.utils.Log - task1.SendTestMail@2aaf7cc2-send2运行失败

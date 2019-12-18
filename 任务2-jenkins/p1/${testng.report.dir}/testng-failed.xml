@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <test name="Regression1">
+    <classes>
+      <class name="guoxiaoli.Demo"/>
+      <class name="guoxiaoli.Demo1"/>
+    </classes>
+  </test> <!-- Regression1 -->
+  <test name="Regression1(failed)">
+    <classes>
+      <class name="guoxiaoli.Demo1">
+        <methods>
+          <include name="doAfterMethod"/>
+          <include name="addarticle"/>
+          <include name="freight"/>
+          <include name="doBeforeClass"/>
+          <include name="delivery"/>
+          <include name="setpassowrd"/>
+          <include name="takeself"/>
+        </methods>
+      </class> <!-- guoxiaoli.Demo1 -->
+      <class name="guoxiaoli.Demo">
+        <methods>
+          <include name="doAfterMethod"/>
+          <include name="login1"/>
+          <include name="doBeforeClass"/>
+        </methods>
+      </class> <!-- guoxiaoli.Demo -->
+    </classes>
+  </test> <!-- Regression1(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

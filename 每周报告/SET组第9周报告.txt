@@ -1,0 +1,7 @@
+SET组第9周任务完成情况
+1.各成员完成了环境的搭建（Android，数据库及服务器端）
+2.各成员完成了测试用例和缺陷报告的的编写
+3.使用了monkey，生成了日志文件
+3.通过乖宝APP的需求说明书对该产品有详细了解
+
+测试用例和缺陷报告文件上传到了GitHub仓库：https://github.com/guoxiaoligxl/SET-project

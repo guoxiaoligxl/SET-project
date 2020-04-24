@@ -24,14 +24,11 @@ public class BaseTest {
 		url=new URL("http://127.0.0.1:4723/wd/hub");
 		DesiredCapabilities cap=new DesiredCapabilities();
 		cap.setCapability("platformName", "Android");
-		cap.setCapability("deviceName", "127.0.0.1:62001");
-		
-//		cap.setCapability("appPackage", "com.example.todolist");
-//		cap.setCapability("appActivity", ".LoginActivity");
-		
+		cap.setCapability("deviceName", "4YY4C17801001437");
+//		cap.setCapability("deviceName", "ff3eb2f3");
+//		.Login.LoginActivity-.Host.WelcomeActivity-.Host.MainActivity
 		cap.setCapability("appPackage","com.example.lenovo.maandroid");
-		cap.setCapability("appActivity", ".Login.LoginActivity");
-		
+		cap.setCapability("appActivity", ".Host.WelcomeActivity");
 		cap.setCapability("noReset","true");
 		
 		driver=new AndroidDriver<AndroidElement>(url,cap);

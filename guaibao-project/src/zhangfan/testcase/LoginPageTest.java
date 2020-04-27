@@ -16,11 +16,6 @@ public class LoginPageTest extends BaseTest{
 		ExcelDataProvider provider=new ExcelDataProvider();
 		return provider.getTestDataByExcel("D:\\data.xlsx", "loginsuccessdata");
 	}
-	@DataProvider(name="loginfail")
-	public Object[][] createData2() throws IOException{
-		ExcelDataProvider provider=new ExcelDataProvider();
-		return provider.getTestDataByExcel("D:\\data.xlsx", "loginfaildata");
-	}
 	
 	@Test(dataProvider="loginsuccess")
 	public void testLoginSuccess(String phonenumber,String password){
@@ -28,10 +23,12 @@ public class LoginPageTest extends BaseTest{
 		loginpage.loginSuccess(phonenumber,password);
 		loginpage.quitAfterLoginSuccess();
 	}
-	@Test(dataProvider="loginfail")
-	public void testLoginFail(String phonenumber,String password){
+	
+	//单个测试
+	@Test
+	public void testLoginFail() throws InterruptedException{
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.loginFail(phonenumber,password);
+		loginpage.loginFail("111","111");
 	}
 	
 	

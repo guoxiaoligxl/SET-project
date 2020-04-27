@@ -1,6 +1,11 @@
 package edu.pages;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
+
 import edu.utils.BaseAction;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
@@ -48,7 +53,55 @@ public class CommunityPage {
 	public AndroidElement btn_back_item(){
 		return driver.findElementById("detail_back");
 	}
+	public AndroidElement btn_addpicture(){
+		return driver.findElementById("iv_push_speak_img_item");
+	}
+	//选择第一张图片
+	public  MobileElement photo_checked1() {
+		AndroidElement list = driver.findElement(By.id("rvImageList"));
+		List<MobileElement> items = list.findElements(By.id("ivPhotoCheaked"));
+		int count = items.size();
+		return items.get(0);
+	}
+	//选择第二张图片
+	public  MobileElement photo_checked2() {		
+		AndroidElement list = driver.findElement(By.id("rvImageList"));
+		List<MobileElement> items = list.findElements(By.id("ivPhotoCheaked"));
+		int count = items.size();
+		return items.get(1);
+	}
+	//选择第三张图片
+	public  MobileElement photo_checked3() {		
+		AndroidElement list = driver.findElement(By.id("rvImageList"));
+		List<MobileElement> items = list.findElements(By.id("ivPhotoCheaked"));
+		int count = items.size();
+		return items.get(2);
+	}
+	//选择第四张图片
+	public  MobileElement photo_checked4() {		
+		AndroidElement list = driver.findElement(By.id("rvImageList"));
+		List<MobileElement> items = list.findElements(By.id("ivPhotoCheaked"));
+		int count = items.size();
+		return items.get(3);
+	}
+	//选择第五张图片
+	public  MobileElement photo_checked5() {		
+		AndroidElement list = driver.findElement(By.id("rvImageList"));
+		List<MobileElement> items = list.findElements(By.id("ivPhotoCheaked"));
+		int count = items.size();
+		return items.get(4);
+	}
+	//选择第六张图片
+	public  MobileElement photo_checked6() {		
+		AndroidElement list = driver.findElement(By.id("rvImageList"));
+		List<MobileElement> items = list.findElements(By.id("ivPhotoCheaked"));
+		int count = items.size();
+		return items.get(5);
+	}
 	
+	public AndroidElement btn_confirm(){
+		return driver.findElementById("btnConfirm");
+	}
 	
 	
 	//添加帖子
@@ -58,6 +111,58 @@ public class CommunityPage {
 		action.type(editpost_item(), content);
 		action.click(btn_submitpost());		
 	}
+	//添加带一张图片的帖子
+	public void addPostWithOnePicture(){
+		action.click(btn_community());
+		action.click(addpost_item());
+		action.click(btn_addpicture());
+		action.click(photo_checked1());
+		action.click(btn_confirm());
+		action.click(btn_submitpost());		
+
+	}
+	//添加带有六张图片的帖子
+	public void addPostWithSixPictures() throws InterruptedException{
+		action.click(btn_community());
+		action.click(addpost_item());
+		action.click(btn_addpicture());
+		action.click(photo_checked1());
+		action.click(photo_checked2());
+		action.click(photo_checked3());
+		action.click(photo_checked4());
+		action.click(photo_checked5());
+		action.click(photo_checked6());
+		action.click(btn_confirm());
+		action.click(btn_submitpost());
+		Thread.sleep(20000);
+
+	}
+	//添加带有一张图片和文字的帖子
+	public void addPostWithOnePictureAndText(String text){
+		action.click(btn_community());
+		action.click(addpost_item());
+		action.type(editpost_item(), text);
+		action.click(btn_addpicture());
+		action.click(photo_checked1());
+		action.click(btn_confirm());
+		action.click(btn_submitpost());
+	}
+	//添加带有六张图片和文字的帖子
+	public void addPostWithSixPicturesAndText(String text) throws InterruptedException{
+		action.click(btn_community());
+		action.click(addpost_item());
+		action.type(editpost_item(), text);
+		action.click(btn_addpicture());
+		action.click(photo_checked1());
+		action.click(photo_checked2());
+		action.click(photo_checked3());
+		action.click(photo_checked4());
+		action.click(photo_checked5());
+		action.click(photo_checked6());
+		action.click(btn_confirm());
+		action.click(btn_submitpost());
+		Thread.sleep(20000);
+	}
 	//点赞功能
 	public void dianzan(){
 		action.click(btn_community());
@@ -65,14 +170,6 @@ public class CommunityPage {
 	}
 	//评论成功
 	public String commentSuccess(String commentcontent){
-		action.click(btn_community());
-		action.click(btn_comment());
-		action.type(editcomment_item(), commentcontent);
-		action.click(btn_submitcomment());
-		return action.getToast();
-	}
-	//评论失败
-	public String commentFail(String commentcontent){
 		action.click(btn_community());
 		action.click(btn_comment());
 		action.type(editcomment_item(), commentcontent);

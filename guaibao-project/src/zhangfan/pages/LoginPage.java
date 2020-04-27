@@ -39,12 +39,10 @@ public class LoginPage {
 		action.click(btn_login());
 	}
 	//登录失败
-	public String loginFail(String phonenumber,String password){
+	public String loginFail(String phonenumber,String password) throws InterruptedException{
 		action.type(phonenumber_item(),phonenumber);
 		action.type(password_item(),password);
 		action.click(btn_login());
-		String text=action.getToast();
-		action.quitApp();
 		return action.getToast();
 	}
 	//登录成功后退出登录
@@ -54,8 +52,5 @@ public class LoginPage {
 		action.click(btn_quit());
 		return new LoginPage(driver);
 	}
-	//登录未成功退出
-//	public LoginPage quitAfterLoginFail(){
-//		LoginPage loginpage=new LoginPage(driver);
-//	}
+	
 }

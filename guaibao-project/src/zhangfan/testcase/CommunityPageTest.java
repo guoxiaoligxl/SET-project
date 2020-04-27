@@ -34,6 +34,18 @@ public class CommunityPageTest extends BaseTest{
 		ExcelDataProvider provider=new ExcelDataProvider();
 		return provider.getTestDataByExcel("D:\\data.xlsx", "replytocommentdata");
 	}
+	@DataProvider(name="textcontent")
+	public Object[][] createData5() throws IOException{
+		ExcelDataProvider provider=new ExcelDataProvider();
+		return provider.getTestDataByExcel("D:\\data.xlsx", "textcontentdata");
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -64,14 +76,29 @@ public class CommunityPageTest extends BaseTest{
 		communitypage.commentSuccess(commentcontent);
 		
 	}
-	@Test(dataProvider="commentfail")
-	public void testCommentFail(String commentcontent){
-		CommunityPage communitypage=new CommunityPage(driver);
-		communitypage.commentFail(commentcontent);
-	}
 	@Test(dataProvider="replytocomment")
 	public void testReplyToComment(String content){
 		CommunityPage communitypage=new CommunityPage(driver);
 		communitypage.replyToComment(content);
+	}
+	@Test
+	public void testaddPostWithOnePicture(){
+		CommunityPage communitypage=new CommunityPage(driver);
+		communitypage.addPostWithOnePicture();
+	}
+	@Test
+	public void testaddPostWithSixPictures() throws InterruptedException{
+		CommunityPage communitypage=new CommunityPage(driver);
+		communitypage.addPostWithSixPictures();
+	}
+	@Test(dataProvider="textcontent")
+	public void testaddPostWithOnePictureAndText(String text){
+		CommunityPage communitypage=new CommunityPage(driver);
+		communitypage.addPostWithOnePictureAndText(text);
+	}
+	@Test(dataProvider="textcontent")
+	public void testaddPostWithSixPicturesAndText(String text) throws InterruptedException{
+		CommunityPage communitypage=new CommunityPage(driver);
+		communitypage.addPostWithSixPicturesAndText(text);
 	}
 }

@@ -103,7 +103,6 @@ public class BaseAction {
 	public String getToast() {
 		return driver.findElementByXPath("//*[@class='android.widget.Toast']").getText();
 	}
-	public void quitApp(){
-		driver.quit();
-	}
+	
+	
 }
